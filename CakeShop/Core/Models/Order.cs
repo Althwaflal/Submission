@@ -57,7 +57,6 @@ namespace CakeShop.Core.Models
         [StringLength(255)]
         public string Personal_Note { get; set; }
 
-
         [Required]
         public string UserId { get; set; }
         public IdentityUser User { get; set; }
@@ -67,6 +66,7 @@ namespace CakeShop.Core.Models
         public Order()
         {
             OrderDetails = new Collection<OrderDetail>();
+
         }
     }
 }

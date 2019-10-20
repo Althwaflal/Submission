@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Test</title>
+</head>
+<body>
+<script type="text/javascript">
+var data = JSON.stringify({
+  "OrderPlacedTime": "2019-10-19 23:05:20.3637659",
+  "firstName": "Tory",
+  "lastName": "Adderley",
+  "AddressLine1": "rrr",
+  "AddressLine2": "dddd",
+  "City": "fff",
+  "State": "fffs",
+  "Country": "sfghfg",
+  "Zipcode": "dkjdn",
+  "PhoneNumber": "3342345321",
+  "Email": "ff@444.com",
+  "Personal_Note": "ffff",
+  "UserId": "be353b5a-b4a5-434f-aac2-fbd3a6fc68be"
+});
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "http://localhost:11911/3/11");
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader("User-Agent", "PostmanRuntime/7.18.0");
+xhr.setRequestHeader("Accept", "*/*");
+xhr.setRequestHeader("Cache-Control", "no-cache");
+xhr.setRequestHeader("Postman-Token", "c80131ee-4bff-4467-ac7e-585ac9750b7e,e30b5ef3-1640-4caa-a0e0-30f61eca8596");
+xhr.setRequestHeader("Host", "localhost:11911");
+xhr.setRequestHeader("Accept-Encoding", "gzip, deflate");
+xhr.setRequestHeader("Content-Length", "356");
+xhr.setRequestHeader("Cookie", "CartId-cookie=95ee3362-4f08-46d6-bae6-a55d2c8dfa6b");
+xhr.setRequestHeader("Connection", "keep-alive");
+xhr.setRequestHeader("cache-control", "no-cache");
+
+xhr.send(data);
+</script>
+</body>
+</html>
