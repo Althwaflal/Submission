@@ -48,6 +48,12 @@ namespace CakeShop.Core.Dto
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
 
+
+        // Allow for long personal notes 
+        [StringLength(500)]
+        [Display(Name = "Personal Note")]
+        public string Personal_Note { get; set; }
+
         [StringLength(255)]
         [Required(ErrorMessage = "Email Address is required")]
         [Display(Name = "Email Address")]

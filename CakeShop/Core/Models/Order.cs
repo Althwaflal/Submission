@@ -54,6 +54,10 @@ namespace CakeShop.Core.Models
 
         public decimal OrderTotal { get; set; }
 
+        [StringLength(255)]
+        public string Personal_Note { get; set; }
+
+
         [Required]
         public string UserId { get; set; }
         public IdentityUser User { get; set; }

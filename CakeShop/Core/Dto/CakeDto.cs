@@ -10,6 +10,11 @@ namespace CakeShop.Core.Dto
         [Display(Name = "Cake Name")]
         public string Name { get; set; }
 
+        // Calories should required for each Cake 
+        [Required]
+        [Display(Name = "Calories")]
+        public int Calories { get; set; }
+
         [Required]
         [Display(Name = "Short Description")]
         [MaxLength(50)]
@@ -33,5 +38,6 @@ namespace CakeShop.Core.Dto
 
         [Display(Name = "Category")]
         public int CategoryId { get; set; }
+
     }
 }

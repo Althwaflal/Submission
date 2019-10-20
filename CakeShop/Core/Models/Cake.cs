@@ -28,6 +28,10 @@ namespace CakeShop.Core.Models
 
         [Required]
         [StringLength(255)]
+        public int Calories { get; set; }
+
+        [Required]
+        [StringLength(255)]
         public bool IsCakeOfTheWeek { get; set; }
 
         public int CategoryId { get; set; }
