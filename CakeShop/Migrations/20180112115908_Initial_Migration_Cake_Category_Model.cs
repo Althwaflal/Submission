@@ -38,7 +38,8 @@ namespace CakeShop.Migrations
                     LongDescription = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Price = table.Column<decimal>(nullable: false),
-                    ShortDescription = table.Column<string>(nullable: true)
+                    ShortDescription = table.Column<string>(nullable: true),
+                    Calories = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

@@ -27,6 +27,10 @@ namespace CakeShop.Migrations
 
                     b.Property<int>("CategoryId");
 
+                    b.Property<int>("Calories")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
                     b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasMaxLength(255);
@@ -96,6 +100,9 @@ namespace CakeShop.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<string>("Personal_Note")
                         .HasMaxLength(255);
 
                     b.Property<string>("LastName")
